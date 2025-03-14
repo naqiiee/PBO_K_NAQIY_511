@@ -2,8 +2,7 @@ import java.util.Scanner;
 
 public class tugas1 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        try {
+        try (Scanner scanner = new Scanner(System.in)) {
             System.out.println("Pilih login:");
             System.out.println("1. Admin");
             System.out.println("2. Mahasiswa");
@@ -21,8 +20,6 @@ public class tugas1 {
             } else {
                 System.out.println("Input harus berupa angka!");
             }
-        } finally {
-            scanner.close();
         }
     }
 
