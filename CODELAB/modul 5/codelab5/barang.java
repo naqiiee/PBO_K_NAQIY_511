@@ -1,0 +1,35 @@
+package codelab5;
+
+public class barang {
+    private String nama;
+    private int stok;
+
+    public barang(String nama, int stok) {
+        this.nama = nama;
+        this.stok = stok;
+    }
+
+    public String getNama() {
+        return nama;
+    }
+
+    public int getStok() {
+        return stok;
+    }
+
+    public void tambahStok(int jumlah) {
+        this.stok += jumlah;
+    }
+
+    public void kurangiStok(int jumlah) throws Exception {
+        if (jumlah > stok) {
+            throw new Exception("Stok tidak cukup untuk dikurangi.");
+        }
+        this.stok -= jumlah;
+    }
+
+    @Override
+    public String toString() {
+        return "Nama: " + nama + ", Stok: " + stok;
+    }
+}

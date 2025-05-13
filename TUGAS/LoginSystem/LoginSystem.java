@@ -9,7 +9,7 @@ public class LoginSystem {
         System.out.println("2. Mahasiswa");
         System.out.print("Masukkan pilihan: ");
         int pilihan = scanner.nextInt();
-        scanner.nextLine(); // buang newline
+        scanner.nextLine();
 
         if (pilihan == 1) {
             // Login sebagai Admin
@@ -18,7 +18,7 @@ public class LoginSystem {
             System.out.print("Masukkan password: ");
             String inputPassword = scanner.nextLine();
 
-            Admin admin = new Admin("Admin Name", "511", "naqiy", "umm123");
+            Admin admin = new Admin("Admin Name", "511", "rohid", "umm123");
             if (admin.login(inputUsername, inputPassword)) {
                 admin.displayInfo();
             } else {
@@ -32,7 +32,7 @@ public class LoginSystem {
             System.out.print("Masukkan NIM: ");
             String inputNim = scanner.nextLine();
 
-            Mahasiswa mhs = new Mahasiswa("Hilmiy An Naqiy Bilal", "202410370110511");
+            Mahasiswa mhs = new Mahasiswa("rohid", "202410370110527");
             if (mhs.login(inputNama, inputNim)) {
                 mhs.displayInfo();
             } else {
